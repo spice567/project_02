@@ -1,0 +1,3594 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+<!-- 头部初始化  -->
+
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="keywords" content="收库,收库123,云收藏,个性网址导航,自定义网址导航,网址收藏,全能搜索">
+<meta name="description" content="《收库123 · shouku123.com》在这里可以定制，专属于您个人的网址导航主页。「全能搜索」：集成网上各类搜索于一个搜索框；「网址云收藏」：将网址收藏在云端，实现跨浏览器，跨终端，通过“收藏口令”实现免登录收藏网址。">
+<meta name="baidu-site-verification" content="fJlGQD0Wk7" />
+<meta name="msvalidate.01" content="C449C89B946BACCAD4C1ECE08949EFF2" />
+<meta name="360-site-verification" content="5f3f3159cd9c838fd5b2b9cab4ea01a6" />
+<meta name="google-site-verification" content="fM_qJ0CDoCa-i5bsBkIEKkfx2I6jb27ESNQ4xHsScG4" />
+
+<title>spice</title>
+<link href="/UploadData/202201/photo/22011321372947400405_small34.jpg" rel="shortcut icon">
+<link href="https://shouku123.com/res/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="https://shouku123.com/res/css/mycolor.css" rel="stylesheet" type="text/css">
+<link href="https://shouku123.com/res/css/app_nav.css" rel="stylesheet" type="text/css">
+<link href="https://shouku123.com/res/css/skBase.css" rel="stylesheet">
+<link href="https://shouku123.com/res/css/index.css" rel="stylesheet" type="text/css">
+</head>
+<!-- 个性设置 -->
+ 
+
+<style type="text/css">
+.my-nav-tabs>li>a {
+	margin-left: 2px;
+}
+BODY {
+
+	background-image: URL('https://www.sayhuahuo.com/template/default/style/t4/bgimg.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-size: cover;
+
+
+}
+
+.my-footer,.my-footer a {
+	color:#9C9C9C!important;
+}
+
+.navbar-default{
+	
+	
+	background-color: #87ceeb;
+	
+	
+	
+	
+	border-color: #e7e7e7;
+	
+}
+
+
+
+.my-app-nav{
+
+
+    background-color:#f5f5f5!important;
+
+
+}
+
+
+</style>
+<body>
+
+<!-- 头部导航 -->
+
+
+
+
+<!-- 头部导航 -->
+<nav class="navbar navbar-default" role="navigation" style="margin-bottom: 5px;">
+	<div class="container">
+		<div class="navbar-header">
+        	<span class="navbar-btn" style="margin-left: 10px;">
+        		<img alt="shouku123" src="/UploadData/202201/photo/22011321372947400405_small300.jpg" class="login_img navbar-btn img-rounded">
+        		<a href="https://shouku123.com/spice"><img alt="shouku123" src="/res/img/shouku123_logo.png" class="navbar-btn img-rounded" style="width: 100px;height: 34px;"></a>
+        	</span>
+        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+	            <span class="sr-only">切换导航</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+        	</button>
+    	</div>
+
+    	<div class="collapse navbar-collapse my-navbar" id="example-navbar-collapse">
+			<form class="navbar-form navbar-left" role="search" id="addUrlForm" name="addUrlForm" onkeydown="if(event.keyCode==13){subAddUrlForm();};">
+		        <div class="form-group ">
+		        	<label for="addUrlForm_url" class="sr-only">网址</label>
+			    	<input type="url" 
+			    		   class="form-control" 
+			    		   placeholder="粘帖需要收藏的网址" 
+			    		   id="addUrlForm_url" 
+			    		   name="url" 
+			    		   maxlength="255" 
+			    		    
+			    		   onBlur="javascript:navbarUrlOnBlur();"
+			    		>
+				</div>
+				<div class="form-group ">
+			    	<label for="addUrlForm_title" class="sr-only">标题</label>
+			    	<input type="text" class="form-control" placeholder="网址的标题(自动)" 
+			    		id="addUrlForm_title" name="title" maxlength="75" >
+				</div>
+				
+				<hr class="visible-md visible-sm" style="margin:10px 0px;"></hr>
+				<div class="form-group">
+					<input type="hidden" name="appId" value="4599"/>
+			    	<select class="form-control" id="addUrlForm_urlGroupSelect" name="urlGroupSelect" >
+			    		
+			    			<option value="149999">参考手册</option>
+			    		
+			    			<option value="150000">前端</option>
+			    		
+			    			<option value="186456">默认分组</option>
+			    		
+			    			<option value="149996">开源社区</option>
+			    		
+			    			<option value="149997">问答社区</option>
+			    		
+			    			<option value="149998">技术社区</option>
+			    		
+			    			<option value="149995">云服务</option>
+			    		
+			    			<option value="150001">编程语言</option>
+			    		
+			    			<option value="150002">开放平台</option>
+			    		
+			    		<option value="0" >+ 创建默认分组</option>
+						<option value="-1" id="addUrlGroupsOption">+ 创建新分组</option>
+					</select>
+				</div>
+				<div class="form-group ">
+			    	<select class="form-control" id="addUrlForm_isPublic" name="isPublic" >
+						  <option value="1">公开</option>
+						  <option value="0">私密</option>
+					</select>
+			  	</div>
+			  	<button type="button" class="btn btn-default" onclick="javascript:subAddUrlForm();"  >收藏</button>
+	        </form>
+			<ul class="nav navbar-nav navbar-right" >
+				
+					
+					
+						<li>
+							<a href="/home/userinfo.html" style="padding-left: 15px;padding-right: 0px;" class="myfont" title="个人主页">
+							<span class="glyphicon glyphicon-user"></span> 我的
+							</a>
+						</li>
+						<li>
+							<a href="/pub/logout.do" style="padding-left: 15px;padding-right: 0px;" class="myfont" title="退出登录">
+							<span class="glyphicon glyphicon-log-out"></span> 注销
+							</a>
+						</li>
+					
+					
+				
+	        </ul>
+        </div>
+	</div>
+</nav>
+
+<!-- url消息框 -->
+<div class="container">
+<div class="alert alert-danger" role="alert" id="addUrlForm_alert" style="text-align: center;display: none;">
+</div>
+</div>
+
+<!-- 创建分组模态框（Modal） -->
+<div class="modal fade" id="addUrlGroupsModal" role="dialog" aria-labelledby="addUrlGroupsLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content myfont">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="javascript:closeAddUrlGroupModel();">&times;</button>
+                <h4 class="modal-title " id="addUrlGroupsLabel" >创建分组</h4>
+            </div>
+            <form method="post" id="addUrlGroups_form" name="addUrlGroups_form" onkeydown="if(event.keyCode==13){return subAddUrlGroupModel();};">
+            <div class="modal-body">
+				  <div class="form-group">
+				    <label for="addUrlGroups_title">组名:</label>
+				    <input type="text" class="form-control" maxlength="10" placeholder="请输入分组名(最长10位)" 
+				    		id="addUrlGroups_title" name="title">
+				  </div>
+				  
+				  <div class="form-group">
+				    <div><label>颜色:</label></div>
+				    <div class="btn-group colorBtnGroup" role="group">
+				      <input type="hidden" name="color" value="default" id="addUrlGroups_color">
+					  <button type="button" class="btn btn-default" value="default">
+					  	<span class="glyphicon glyphicon-ok"></span>
+					  </button>
+					  <button type="button" class="btn btn-primary" value="primary">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-success" value="success">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-info" value="info">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-warning" value="warning">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-danger" value="danger">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+				  	</div>
+				  </div>
+				  
+			  	  <input type="hidden" name="appId" value="4599"/>
+				  <div class="form-group ">
+				    <label for="addUrlGroups_isPublic1">是否公开:</label>
+					<div>
+					    <label class="radio-inline">
+						  <input type="radio" name="isPublic" id="addUrlGroups_isPublic1" value="1" checked="checked"> 公开
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="isPublic" id="addUrlGroups_isPublic2" value="0" > 私密
+						</label>
+					</div>
+			  	  </div>
+				  
+				  <div class="alert alert-danger" style="display: none;"
+							role="alert" id="addUrlGroups_alert"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="javascript:closeAddUrlGroupModel();">关闭</button>
+                <button type="button" class="btn btn-primary" onclick="javascript:subAddUrlGroupModel();">提交</button>
+            </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 意见反馈管理 模态框（Modal） -->
+<div class="modal fade" id="feedbackModal" role="dialog" aria-labelledby="feedbackLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+        <div class="modal-content myfont">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <a href="https://shouku123.com/"><img src="/res/img/shouku123_logo.png"></a>
+            </div>
+            <div class="modal-body">
+				<p ><strong>使用问题、意见反馈 </strong></p>
+				<p>您可以通过以下方式联系我们 ： </p>
+				<p>邮箱：hi<span>@</span>shouku123.com <p>微信号(可拉群)</p></p>
+				<!-- <p style="padding-top: 10px;"><strong>此网站是非盈利性网站，欢迎捐赠(用于网站维护及服务器续费)</strong></p> -->
+				<div class="row">
+				  <div class="col-md-6"><img alt="微信交流群" src="/res/img/wxqun.jpg" width="250" ></div>
+				  <!-- <div class="col-md-6"><img alt="微信支付" src="/res/img/wxpay.jpg" width="250" height="300"></div> -->
+				</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 置顶 -->
+
+
+ 
+
+
+<!-- 置顶 -->
+<div class="container top-div">
+	<div class="text-center">
+	    <p style="margin-top: 8px;margin-bottom: 6px;font-size:16px;" class="myfont myfontColor user-settings">spice</p>
+	    <p class="myfont myfontColor myTextOverflow user-settings" style="margin-bottom: 10px;">您的主页（https://shouku123.com/spice）您做主!</p>
+	</div>
+	<div class="row">
+	    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+			
+		    <ul id="myTab" class="nav nav-tabs my-nav-tabs" style="border-bottom:0px;">
+			   
+	       			<li class="active " >
+	       				<a href="#baidu_so" data-toggle="tab" data-soid="1">百度搜索</a>
+	       			</li>
+		       
+	       			<li class=" " >
+	       				<a href="#bing_so" data-toggle="tab" data-soid="5">必应搜索</a>
+	       			</li>
+		       
+	       			<li class=" hidden-xs" >
+	       				<a href="#google_so" data-toggle="tab" data-soid="3">谷歌搜索</a>
+	       			</li>
+		       
+	       			<li class=" hidden-xs" >
+	       				<a href="#zhihu_so" data-toggle="tab" data-soid="21">知乎</a>
+	       			</li>
+		       
+	       			<li class=" hidden-xs" >
+	       				<a href="#taobao_gouwu_so" data-toggle="tab" data-soid="16">淘宝</a>
+	       			</li>
+		       
+	       			<li class=" hidden-xs" >
+	       				<a href="#weibo_so" data-toggle="tab" data-soid="32">微博</a>
+	       			</li>
+		       
+		       
+				   <li class="dropdown ">
+				      <a href="#" id="other_so" class="dropdown-toggle" 
+				         data-toggle="dropdown"><span>其他 </span><b class="caret"></b>
+				      </a>
+				      <ul class="dropdown-menu" role="menu" aria-labelledby="other_so" id="other_so_menu">
+				      	 
+				       			<li class="visible-xs" >
+				       				<a href="#google_so" data-toggle="tab" data-soid="3">谷歌搜索</a>
+				       			</li>
+				         
+				       			<li class="visible-xs" >
+				       				<a href="#zhihu_so" data-toggle="tab" data-soid="21">知乎</a>
+				       			</li>
+				         
+				       			<li class="visible-xs" >
+				       				<a href="#taobao_gouwu_so" data-toggle="tab" data-soid="16">淘宝</a>
+				       			</li>
+				         
+				       			<li class="visible-xs" >
+				       				<a href="#weibo_so" data-toggle="tab" data-soid="32">微博</a>
+				       			</li>
+				         
+				       			<li class="" >
+				       				<a href="#sogou_so" data-toggle="tab" data-soid="4">搜狗搜索</a>
+				       			</li>
+				         
+				       			<li class="" >
+				       				<a href="#panc_so" data-toggle="tab" data-soid="22">胖次搜索</a>
+				       			</li>
+				         
+				       			<li class="" >
+				       				<a href="#baidu_map_so" data-toggle="tab" data-soid="7">百度地图</a>
+				       			</li>
+				         
+				       			<li class="" >
+				       				<a href="#baidu_fanyi_so" data-toggle="tab" data-soid="33">百度翻译</a>
+				       			</li>
+				         
+				       			<li class="" >
+				       				<a href="#google_fanyi_so" data-toggle="tab" data-soid="34">谷歌翻译</a>
+				       			</li>
+				         
+				       			<li class="" >
+				       				<a href="#github_so" data-toggle="tab" data-soid="25">github</a>
+				       			</li>
+				         
+				      </ul>
+				   </li>
+			   		       
+			</ul>
+			
+			
+			<div id="soTabContent" class="tab-content" >
+				<form action="https://shouku123.com/spice/gotoSo.do" method="post" target=_blank>
+					<div class="input-group" >
+				      <input type="text" class="form-control input-lg" name="word" placeholder="立即搜索" baiduSug="1">
+				      <span class="input-group-btn">
+				        <button class="btn btn-primary btn-lg" type="submit" style="line-height: 1.34;">搜一下</button>
+				      </span>
+				    </div>
+				    <input type="hidden" name="soid" id="hide_so_id" value="1">
+			    </form>
+				
+				   <div class="tab-pane fade in active" id="baidu_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+				   <div class="tab-pane fade " id="bing_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+				   <div class="tab-pane fade " id="google_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+				   <div class="tab-pane fade " id="zhihu_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+				   <div class="tab-pane fade " id="taobao_gouwu_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+				   <div class="tab-pane fade " id="weibo_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+				   <div class="tab-pane fade " id="sogou_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+				   <div class="tab-pane fade " id="panc_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+				   <div class="tab-pane fade " id="baidu_map_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+				   <div class="tab-pane fade " id="baidu_fanyi_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+				   <div class="tab-pane fade " id="google_fanyi_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+				   <div class="tab-pane fade " id="github_so" >
+					    <p class="text-muted so-remark user-settings" >
+					    	<span class="so-remark-content"></span>
+					    </p>
+				   </div>
+				
+			</div>
+			
+	  	</div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->
+
+
+
+</div>
+	
+<!-- URL分组 -->
+<div class="container url-group">
+
+<!--  应用列表 -->
+
+
+
+ 
+
+<!-- 应用列表 -->
+<ol class="my-breadcrumb clearfix my-app-nav">
+	
+		 
+		 
+		
+			<li><a href="https://shouku123.com/spice">默认</a></li>
+		 	
+	
+	
+  
+  	
+		
+			<li class="app-item active">码农</li>
+		 
+		 	
+	
+  
+  	
+		 
+		
+			<li class="app-item">
+		  		<a href="https://shouku123.com/spice/二次元">二次元</a>
+		  	</li>
+		 	
+	
+  
+  	
+		 
+		
+			<li class="app-item">
+		  		<a href="https://shouku123.com/spice/三次元">三次元</a>
+		  	</li>
+		 	
+	
+  
+  
+  <li class="app-item"><a href="javascript:void(0);" onclick="javascript:showAppModel();">✚</a></li>
+  
+  <li class="so-item hidden-xs" >
+  	  <div style="position:relative;">
+      <input type="text" class="url-so form-control" placeholder="搜索本页网址" onkeyup="javascript:pageSo(this);" >
+      <span class="glyphicon glyphicon-search so-input-logo"></span>
+      </div>
+  </li>
+</ol>
+
+<!-- Modal -->
+<div class="modal fade myfont" id="user-app-modal" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><strong>设置版块</strong></h4>
+      </div>
+      <div class="modal-body">
+        <form id="appForm" name="appForm">
+		  <div class="form-group">
+		    <label for="appName">版块名称</label>
+		    <input type="hidden" name="id" id="appId"/>
+		    <input type="text" class="form-control" id="appName" name="appName" placeholder="请输入版块名称（最多10位）" maxlength="10" >
+		  </div>
+		  <div class="form-group">
+		    <label for="appItem">排序<small>(按数值升序)</small></label>
+		    <input type="number" class="form-control" id="appItem" name="appItem" 
+		    			min="1" max="999999" placeholder="请输入排序值" maxlength="6" value="4">
+		  </div>
+		  <div class="form-group">
+		  	<label for="isUsePwd0">是否使用密码<small>(在非登录状态下)</small></label>
+		  	<div style="margin-bottom: 5px;">
+			    <label class="radio-inline">
+				  <input type="radio" name="isUsePwd" id="isUsePwd0" value="0" class="is-use-pwd-radio" checked="checked"> 不使用
+				</label>
+				<label class="radio-inline">
+				  <input type="radio" name="isUsePwd" id="isUsePwd1" value="1" class="is-use-pwd-radio"> 使用收藏口令
+				</label>
+				<label class="radio-inline">
+				  <input type="radio" name="isUsePwd" id="isUsePwd2" value="2" class="is-use-pwd-radio"> 设置新密码
+				</label>
+			</div>
+			<input type="password" class="form-control" id="appPwd" name="appPwd" placeholder="请设置此版块密码" maxlength="32" style="display: none;">
+		  </div>
+		  
+		  <div class="alert alert-danger" style="display: none;" role="alert" id="alterAppFormMsg"></div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" onclick="subAppFormModel();">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	
+	
+	<div class="row">
+	  <div class="col-md-3 groupCol" >
+	  		 <ul id="urlGroups1" class="list-unstyled urlGroups" data-col="0">
+			  	
+			  		
+						<!-- 链接集合 -->
+						
+
+<li class="urlGroupItem" data-id="149999" id="urlGroupItem_149999">
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <div class="pull-left myfont" style="width:65%;cursor:move;">参考手册</div>
+            <div class="pull-right">
+                
+						  		<span class="glyphicon glyphicon-cog my-glyphicon-btn"
+                                      onclick="javascript:updateUrlGroup(149999);" title="设置"></span>
+                
+                <span class="glyphicon glyphicon-share-alt my-glyphicon-btn"
+                      onclick="javascript:window.location.href='/pub/group/149999';" title="分享"></span>
+                <span class="glyphicon glyphicon-leftOrdown glyphicon-chevron-down my-glyphicon-btn"
+                      onclick="javascript:updateCollapse('149999',this);" title="折叠"></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- List group -->
+        <ul class="list-group collapse in urls " id="urls_149999" data-id="149999" title="参考手册">
+            
+            
+                <li class="list-group-item" title="热度:10" data-id="813915" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813915')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813915" title="HTML 参考手册" target="_blank" class="myGotoUrl">HTML 参考手册</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813915);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('HTML 参考手册','http://www.w3school.com.cn/tags/index.asp','pub/encoderQRCode2GotoURL.do?id=813915');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:5" data-id="813916" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813916')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813916" title="CSS 参考手册" target="_blank" class="myGotoUrl">CSS 参考手册</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813916);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('CSS 参考手册','https://www.w3school.com.cn/cssref/index.asp','pub/encoderQRCode2GotoURL.do?id=813916');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:9" data-id="813917" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813917')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813917" title="JavaScript 参考手册" target="_blank" class="myGotoUrl">JavaScript 参考手册</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813917);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('JavaScript 参考手册','http://www.w3school.com.cn/jsref/index.asp','pub/encoderQRCode2GotoURL.do?id=813917');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:9" data-id="813918" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813918')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813918" title="jQuery API 中文文档" target="_blank" class="myGotoUrl">jQuery API 中文文档</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813918);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('jQuery API 中文文档','http://www.jquery123.com/','pub/encoderQRCode2GotoURL.do?id=813918');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:2" data-id="813919" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813919')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813919" title="Java SE 文档" target="_blank" class="myGotoUrl">Java SE 文档</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813919);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('Java SE 文档','http://www.oracle.com/technetwork/cn/java/javase/documentation/api-jsp-136079-zhs.html','pub/encoderQRCode2GotoURL.do?id=813919');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+        </ul>
+    </div>
+</li>
+				  	
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+						<!-- 链接集合 -->
+						
+
+<li class="urlGroupItem" data-id="149997" id="urlGroupItem_149997">
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <div class="pull-left myfont" style="width:65%;cursor:move;">问答社区</div>
+            <div class="pull-right">
+                
+						  		<span class="glyphicon glyphicon-cog my-glyphicon-btn"
+                                      onclick="javascript:updateUrlGroup(149997);" title="设置"></span>
+                
+                <span class="glyphicon glyphicon-share-alt my-glyphicon-btn"
+                      onclick="javascript:window.location.href='/pub/group/149997';" title="分享"></span>
+                <span class="glyphicon glyphicon-leftOrdown glyphicon-chevron-down my-glyphicon-btn"
+                      onclick="javascript:updateCollapse('149997',this);" title="折叠"></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- List group -->
+        <ul class="list-group collapse in urls " id="urls_149997" data-id="149997" title="问答社区">
+            
+            
+                <li class="list-group-item" title="热度:1" data-id="813905" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813905')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813905" title="V2EX" target="_blank" class="myGotoUrl">V2EX</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813905);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('V2EX','https://www.v2ex.com/','pub/encoderQRCode2GotoURL.do?id=813905');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813909" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813909')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813909" title="知乎" target="_blank" class="myGotoUrl">知乎</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813909);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('知乎','https://www.zhihu.com/','pub/encoderQRCode2GotoURL.do?id=813909');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813908" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813908')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813908" title="Quora" target="_blank" class="myGotoUrl">Quora</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813908);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('Quora','https://www.quora.com/','pub/encoderQRCode2GotoURL.do?id=813908');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813906" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813906')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813906" title="StackOverflow" target="_blank" class="myGotoUrl">StackOverflow</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813906);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('StackOverflow','https://stackoverflow.com/','pub/encoderQRCode2GotoURL.do?id=813906');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813907" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813907')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813907" title="SegmentFault" target="_blank" class="myGotoUrl">SegmentFault</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813907);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('SegmentFault','https://segmentfault.com/','pub/encoderQRCode2GotoURL.do?id=813907');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+        </ul>
+    </div>
+</li>
+				  	
+			  	
+			  		
+			  	
+			  		
+						<!-- 链接集合 -->
+						
+
+<li class="urlGroupItem" data-id="149995" id="urlGroupItem_149995">
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <div class="pull-left myfont" style="width:65%;cursor:move;">云服务</div>
+            <div class="pull-right">
+                
+						  		<span class="glyphicon glyphicon-cog my-glyphicon-btn"
+                                      onclick="javascript:updateUrlGroup(149995);" title="设置"></span>
+                
+                <span class="glyphicon glyphicon-share-alt my-glyphicon-btn"
+                      onclick="javascript:window.location.href='/pub/group/149995';" title="分享"></span>
+                <span class="glyphicon glyphicon-leftOrdown glyphicon-chevron-down my-glyphicon-btn"
+                      onclick="javascript:updateCollapse('149995',this);" title="折叠"></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- List group -->
+        <ul class="list-group collapse in urls " id="urls_149995" data-id="149995" title="云服务">
+            
+            
+                <li class="list-group-item" title="热度:1" data-id="813895" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813895')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813895" title="阿里云" target="_blank" class="myGotoUrl">阿里云</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813895);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('阿里云','https://www.aliyun.com/minisite/goods?userCode=5j2evli2','pub/encoderQRCode2GotoURL.do?id=813895');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813897" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813897')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813897" title="腾讯云" target="_blank" class="myGotoUrl">腾讯云</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813897);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('腾讯云','https://url.cn/P1cD7U2U','pub/encoderQRCode2GotoURL.do?id=813897');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813899" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813899')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813899" title="七牛云" target="_blank" class="myGotoUrl">七牛云</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813899);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('七牛云','https://www.qiniu.com/','pub/encoderQRCode2GotoURL.do?id=813899');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813896" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813896')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813896" title="UCloud" target="_blank" class="myGotoUrl">UCloud</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813896);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('UCloud','https://www.ucloud.cn/','pub/encoderQRCode2GotoURL.do?id=813896');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813898" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813898')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813898" title="西部数码" target="_blank" class="myGotoUrl">西部数码</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813898);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('西部数码','https://www.west.cn/','pub/encoderQRCode2GotoURL.do?id=813898');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+        </ul>
+    </div>
+</li>
+				  	
+			  	
+			  		
+			  	
+			  		
+			  	
+			</ul>
+	  </div>
+	  <div class="col-md-3 groupCol" >
+	  		<ul id="urlGroups2" class="list-unstyled urlGroups" data-col="1">
+			  	
+			  		
+			  	
+			  		
+						<!-- 链接集合 -->
+						
+
+<li class="urlGroupItem" data-id="150000" id="urlGroupItem_150000">
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <div class="pull-left myfont" style="width:65%;cursor:move;">前端</div>
+            <div class="pull-right">
+                
+						  		<span class="glyphicon glyphicon-cog my-glyphicon-btn"
+                                      onclick="javascript:updateUrlGroup(150000);" title="设置"></span>
+                
+                <span class="glyphicon glyphicon-share-alt my-glyphicon-btn"
+                      onclick="javascript:window.location.href='/pub/group/150000';" title="分享"></span>
+                <span class="glyphicon glyphicon-leftOrdown glyphicon-chevron-down my-glyphicon-btn"
+                      onclick="javascript:updateCollapse('150000',this);" title="折叠"></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- List group -->
+        <ul class="list-group collapse in urls " id="urls_150000" data-id="150000" title="前端">
+            
+            
+                <li class="list-group-item" title="热度:4" data-id="813920" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813920')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813920" title="jQuery" target="_blank" class="myGotoUrl">jQuery</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813920);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('jQuery','http://jquery.com/','pub/encoderQRCode2GotoURL.do?id=813920');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:5" data-id="813921" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813921')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813921" title="Bootstrap" target="_blank" class="myGotoUrl">Bootstrap</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813921);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('Bootstrap','http://www.bootcss.com/','pub/encoderQRCode2GotoURL.do?id=813921');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813922" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813922')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813922" title="AngularJS" target="_blank" class="myGotoUrl">AngularJS</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813922);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('AngularJS','https://www.angularjs.org/','pub/encoderQRCode2GotoURL.do?id=813922');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:5" data-id="813923" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813923')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813923" title="jQuery插件库" target="_blank" class="myGotoUrl">jQuery插件库</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813923);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('jQuery插件库','http://www.jq22.com/','pub/encoderQRCode2GotoURL.do?id=813923');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:2" data-id="813924" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813924')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813924" title="阿里巴巴矢量图标库-Iconfont" target="_blank" class="myGotoUrl">阿里巴巴矢量图标库-Iconfont</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813924);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('阿里巴巴矢量图标库-Iconfont','http://www.iconfont.cn/','pub/encoderQRCode2GotoURL.do?id=813924');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:0" data-id="1005480" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=1005480')">
+                        
+                        <a href="/pub/gotoUrl.do?id=1005480" title="IcoMoon字库" target="_blank" class="myGotoUrl">IcoMoon字库</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(1005480);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('IcoMoon字库','https://icomoon.io/','pub/encoderQRCode2GotoURL.do?id=1005480');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:0" data-id="1005481" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=1005481')">
+                        
+                        <a href="/pub/gotoUrl.do?id=1005481" title="比特虫-ico图标制作" target="_blank" class="myGotoUrl">比特虫-ico图标制作</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(1005481);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('比特虫-ico图标制作','https://www.bitbug.net/','pub/encoderQRCode2GotoURL.do?id=1005481');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+        </ul>
+    </div>
+</li>
+				  	
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+						<!-- 链接集合 -->
+						
+
+<li class="urlGroupItem" data-id="149998" id="urlGroupItem_149998">
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <div class="pull-left myfont" style="width:65%;cursor:move;">技术社区</div>
+            <div class="pull-right">
+                
+						  		<span class="glyphicon glyphicon-cog my-glyphicon-btn"
+                                      onclick="javascript:updateUrlGroup(149998);" title="设置"></span>
+                
+                <span class="glyphicon glyphicon-share-alt my-glyphicon-btn"
+                      onclick="javascript:window.location.href='/pub/group/149998';" title="分享"></span>
+                <span class="glyphicon glyphicon-leftOrdown glyphicon-chevron-down my-glyphicon-btn"
+                      onclick="javascript:updateCollapse('149998',this);" title="折叠"></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- List group -->
+        <ul class="list-group collapse in urls " id="urls_149998" data-id="149998" title="技术社区">
+            
+            
+                <li class="list-group-item" title="热度:1" data-id="813910" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813910')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813910" title="IBM-中国" target="_blank" class="myGotoUrl">IBM-中国</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813910);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('IBM-中国','https://www.ibm.com/cn-zh/?lnk=fcc','pub/encoderQRCode2GotoURL.do?id=813910');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813912" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813912')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813912" title="开源中国" target="_blank" class="myGotoUrl">开源中国</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813912);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('开源中国','http://www.oschina.net/','pub/encoderQRCode2GotoURL.do?id=813912');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:2" data-id="813913" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813913')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813913" title="CSDN" target="_blank" class="myGotoUrl">CSDN</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813913);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('CSDN','http://www.csdn.net/','pub/encoderQRCode2GotoURL.do?id=813913');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813914" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813914')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813914" title="51CTO" target="_blank" class="myGotoUrl">51CTO</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813914);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('51CTO','http://www.51cto.com/','pub/encoderQRCode2GotoURL.do?id=813914');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813911" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813911')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813911" title="InfoQ" target="_blank" class="myGotoUrl">InfoQ</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813911);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('InfoQ','http://www.infoq.com/cn/','pub/encoderQRCode2GotoURL.do?id=813911');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+        </ul>
+    </div>
+</li>
+				  	
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+			  	
+			</ul>
+	  </div>
+	  <div class="col-md-3 groupCol" >
+	  		<ul id="urlGroups3" class="list-unstyled urlGroups" data-col="2">
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+						<!-- 链接集合 -->
+						
+
+<li class="urlGroupItem" data-id="186456" id="urlGroupItem_186456">
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <div class="pull-left myfont" style="width:65%;cursor:move;">默认分组</div>
+            <div class="pull-right">
+                
+						  		<span class="glyphicon glyphicon-cog my-glyphicon-btn"
+                                      onclick="javascript:updateUrlGroup(186456);" title="设置"></span>
+                
+                <span class="glyphicon glyphicon-share-alt my-glyphicon-btn"
+                      onclick="javascript:window.location.href='/pub/group/186456';" title="分享"></span>
+                <span class="glyphicon glyphicon-leftOrdown glyphicon-chevron-down my-glyphicon-btn"
+                      onclick="javascript:updateCollapse('186456',this);" title="折叠"></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- List group -->
+        <ul class="list-group collapse in urls " id="urls_186456" data-id="186456" title="默认分组">
+            
+            
+                <li class="list-group-item" title="热度:1" data-id="1000792" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=1000792')">
+                        
+                        <a href="/pub/gotoUrl.do?id=1000792" title="SuperSlide" target="_blank" class="myGotoUrl">SuperSlide</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(1000792);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('SuperSlide','http://www.superslide2.com/','pub/encoderQRCode2GotoURL.do?id=1000792');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="1000793" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=1000793')">
+                        
+                        <a href="/pub/gotoUrl.do?id=1000793" title="iscroll" target="_blank" class="myGotoUrl">iscroll</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(1000793);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('iscroll','https://github.com/cubiq/iscroll','pub/encoderQRCode2GotoURL.do?id=1000793');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="1000794" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=1000794')">
+                        
+                        <a href="/pub/gotoUrl.do?id=1000794" title="Swiper" target="_blank" class="myGotoUrl">Swiper</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(1000794);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('Swiper','https://www.swiper.com.cn/','pub/encoderQRCode2GotoURL.do?id=1000794');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="1004561" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=1004561')">
+                        
+                        <a href="/pub/gotoUrl.do?id=1004561" title="jQuery之家" target="_blank" class="myGotoUrl">jQuery之家</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(1004561);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('jQuery之家','http://www.htmleaf.com/','pub/encoderQRCode2GotoURL.do?id=1004561');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="1004796" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=1004796')">
+                        
+                        <a href="/pub/gotoUrl.do?id=1004796" title="dowebok" target="_blank" class="myGotoUrl">dowebok</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(1004796);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('dowebok','https://www.dowebok.com/','pub/encoderQRCode2GotoURL.do?id=1004796');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:4" data-id="1005123" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=1005123')">
+                        
+                        <a href="/pub/gotoUrl.do?id=1005123" title="ECharts" target="_blank" class="myGotoUrl">ECharts</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(1005123);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('ECharts','https://echarts.apache.org/zh/','pub/encoderQRCode2GotoURL.do?id=1005123');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:0" data-id="1005479" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=1005479')">
+                        
+                        <a href="/pub/gotoUrl.do?id=1005479" title="MDN" target="_blank" class="myGotoUrl">MDN</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(1005479);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('MDN','https://developer.mozilla.org/zh-CN/','pub/encoderQRCode2GotoURL.do?id=1005479');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+        </ul>
+    </div>
+</li>
+				  	
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+						<!-- 链接集合 -->
+						
+
+<li class="urlGroupItem" data-id="150001" id="urlGroupItem_150001">
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <div class="pull-left myfont" style="width:65%;cursor:move;">编程语言</div>
+            <div class="pull-right">
+                
+						  		<span class="glyphicon glyphicon-cog my-glyphicon-btn"
+                                      onclick="javascript:updateUrlGroup(150001);" title="设置"></span>
+                
+                <span class="glyphicon glyphicon-share-alt my-glyphicon-btn"
+                      onclick="javascript:window.location.href='/pub/group/150001';" title="分享"></span>
+                <span class="glyphicon glyphicon-leftOrdown glyphicon-chevron-down my-glyphicon-btn"
+                      onclick="javascript:updateCollapse('150001',this);" title="折叠"></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- List group -->
+        <ul class="list-group collapse in urls " id="urls_150001" data-id="150001" title="编程语言">
+            
+            
+                <li class="list-group-item" title="热度:1" data-id="813925" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813925')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813925" title="Java" target="_blank" class="myGotoUrl">Java</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813925);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('Java','http://www.oracle.com/technetwork/java/javase/downloads/index.html','pub/encoderQRCode2GotoURL.do?id=813925');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813926" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813926')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813926" title="C++" target="_blank" class="myGotoUrl">C++</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813926);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('C++','http://www.cplusplus.com/','pub/encoderQRCode2GotoURL.do?id=813926');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813927" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813927')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813927" title="PHP" target="_blank" class="myGotoUrl">PHP</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813927);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('PHP','http://php.net/','pub/encoderQRCode2GotoURL.do?id=813927');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813928" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813928')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813928" title="Python" target="_blank" class="myGotoUrl">Python</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813928);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('Python','https://www.python.org/','pub/encoderQRCode2GotoURL.do?id=813928');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813929" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813929')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813929" title="ASP.NET" target="_blank" class="myGotoUrl">ASP.NET</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813929);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('ASP.NET','https://www.asp.net/','pub/encoderQRCode2GotoURL.do?id=813929');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+        </ul>
+    </div>
+</li>
+				  	
+			  	
+			  		
+			  	
+			</ul>
+	  </div>
+	  <div class="col-md-3 groupCol" >
+	  		<ul id="urlGroups4" class="list-unstyled urlGroups" data-col="3">
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+						<!-- 链接集合 -->
+						
+
+<li class="urlGroupItem" data-id="149996" id="urlGroupItem_149996">
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <div class="pull-left myfont" style="width:65%;cursor:move;">开源社区</div>
+            <div class="pull-right">
+                
+						  		<span class="glyphicon glyphicon-cog my-glyphicon-btn"
+                                      onclick="javascript:updateUrlGroup(149996);" title="设置"></span>
+                
+                <span class="glyphicon glyphicon-share-alt my-glyphicon-btn"
+                      onclick="javascript:window.location.href='/pub/group/149996';" title="分享"></span>
+                <span class="glyphicon glyphicon-leftOrdown glyphicon-chevron-down my-glyphicon-btn"
+                      onclick="javascript:updateCollapse('149996',this);" title="折叠"></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- List group -->
+        <ul class="list-group collapse in urls " id="urls_149996" data-id="149996" title="开源社区">
+            
+            
+                <li class="list-group-item" title="热度:1" data-id="813902" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813902')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813902" title="GitHub" target="_blank" class="myGotoUrl">GitHub</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813902);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('GitHub','https://github.com/','pub/encoderQRCode2GotoURL.do?id=813902');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813900" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813900')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813900" title="码云" target="_blank" class="myGotoUrl">码云</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813900);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('码云','https://gitee.com/','pub/encoderQRCode2GotoURL.do?id=813900');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:2" data-id="813901" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813901')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813901" title="GoogleCode" target="_blank" class="myGotoUrl">GoogleCode</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813901);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('GoogleCode','https://code.google.com/','pub/encoderQRCode2GotoURL.do?id=813901');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813903" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813903')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813903" title="SourceForge" target="_blank" class="myGotoUrl">SourceForge</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813903);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('SourceForge','http://sourceforge.net/','pub/encoderQRCode2GotoURL.do?id=813903');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813904" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813904')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813904" title="CodeProject" target="_blank" class="myGotoUrl">CodeProject</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813904);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('CodeProject','http://www.codeproject.com/','pub/encoderQRCode2GotoURL.do?id=813904');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+        </ul>
+    </div>
+</li>
+				  	
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+			  	
+			  		
+						<!-- 链接集合 -->
+						
+
+<li class="urlGroupItem" data-id="150002" id="urlGroupItem_150002">
+    <div class="panel panel-default">
+        <div class="panel-heading" >
+            <div class="pull-left myfont" style="width:65%;cursor:move;">开放平台</div>
+            <div class="pull-right">
+                
+						  		<span class="glyphicon glyphicon-cog my-glyphicon-btn"
+                                      onclick="javascript:updateUrlGroup(150002);" title="设置"></span>
+                
+                <span class="glyphicon glyphicon-share-alt my-glyphicon-btn"
+                      onclick="javascript:window.location.href='/pub/group/150002';" title="分享"></span>
+                <span class="glyphicon glyphicon-leftOrdown glyphicon-chevron-down my-glyphicon-btn"
+                      onclick="javascript:updateCollapse('150002',this);" title="折叠"></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- List group -->
+        <ul class="list-group collapse in urls " id="urls_150002" data-id="150002" title="开放平台">
+            
+            
+                <li class="list-group-item" title="热度:3" data-id="813930" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813930')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813930" title="微信开放平台" target="_blank" class="myGotoUrl">微信开放平台</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813930);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('微信开放平台','https://open.weixin.qq.com/','pub/encoderQRCode2GotoURL.do?id=813930');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813931" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813931')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813931" title="百度开发者中心" target="_blank" class="myGotoUrl">百度开发者中心</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813931);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('百度开发者中心','http://developer.baidu.com/','pub/encoderQRCode2GotoURL.do?id=813931');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813933" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813933')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813933" title="蚂蚁金服开放平台" target="_blank" class="myGotoUrl">蚂蚁金服开放平台</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813933);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('蚂蚁金服开放平台','https://open.alipay.com/platform/home.htm','pub/encoderQRCode2GotoURL.do?id=813933');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813934" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813934')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813934" title="新浪微博开放平台" target="_blank" class="myGotoUrl">新浪微博开放平台</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813934);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('新浪微博开放平台','http://open.weibo.com/','pub/encoderQRCode2GotoURL.do?id=813934');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+                <li class="list-group-item" title="热度:1" data-id="813932" >
+                    <div class="pull-left url-title url-title-width noMove" style="cursor:pointer;" onclick="window.open('/pub/gotoUrl.do?id=813932')">
+                        
+                        <a href="/pub/gotoUrl.do?id=813932" title="Apple Developer" target="_blank" class="myGotoUrl">Apple Developer</a>
+                    </div>
+                    <div class="pull-right">
+                        <div class="btn-group dropup">
+                            
+                            
+                                <span class="glyphicon glyphicon-move myButtonColor" style="cursor:move;" title="拖拽移动"></span>
+                                <span class="glyphicon glyphicon-edit myButtonColor noMove" onclick="javascript:updateUrl(813932);"
+                                      onmouseover="javascript:replaceClass(this,'myButtonColor','myButtonColorB');"
+                                      onmouseout="javascript:replaceClass(this,'myButtonColorB','myButtonColor');" style="cursor:pointer;margin-left: 4px;" title="编辑"></span>
+                            
+                            <span  class="glyphicon glyphicon-qrcode myButtonColor noMove"
+                                   title="点击查看二维码"
+                                   style="cursor:pointer;
+												margin-left: 4px;"
+                                   onclick="javascript:qrShow('Apple Developer','https://developer.apple.com/','pub/encoderQRCode2GotoURL.do?id=813932');"></span>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            
+        </ul>
+    </div>
+</li>
+				  	
+			  	
+			</ul>
+	  </div>
+	</div>
+	
+	
+</div>
+
+
+	
+		<div class="container" style="margin-bottom:20px; text-align: center;">
+			<div class="btn-group" role="group" >
+			  <button type="button" class="btn btn-default" onclick="editAppModel();">
+			  	<span class="glyphicon glyphicon-cog"></span>
+			  	编辑
+			  </button>
+			  <button type="button" class="btn btn-default" onclick="deleteApp();">
+			  	<span class="glyphicon glyphicon-trash"></span>
+			  	删除
+			  </button>
+			</div>
+			<div class="alert alert-danger" role="alert" id="app_btn_alert" style="text-align: center;display: none;">
+			</div>
+		</div>
+	
+	
+	
+
+
+
+<!-- 网页尾部 -->
+
+
+
+
+<div id="showMsg" class="alert alert-default showMsg myfont" style="display:none;background-color: #999999;color: #FFF;">
+	更新成功!
+</div>
+
+<!-- 二维码Modal -->
+<div class="modal fade" id="qrShowModal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="qrShowModalLogo"><img src="/res/img/shouku123_logo.png"></h4>
+      </div>
+      <div class="modal-body center-block">
+      	<p id="qrShowModal_title" class="text-center myfont myTextOverflow" style="font-size: 16px;font-weight: bold;"></p>
+      	<p id="qrShowModal_url" class="text-center myTextOverflow"></p>
+      	<p class="text-center"><img id="qrShowModal_img" src=""></p>
+      	<p class="text-center myTextOverflow">扫一扫，手机浏览</p>
+      </div>
+      <div class="modal-footer">
+        <a id="qrShowModal_copyurl" href="javascript:void(0);" data-clipboard-text="" style="padding-right: 20px;">一键复制网址</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container my-footer" >
+	<hr style="margin-top: 5px;margin-bottom: 15px;">
+	
+	
+	<div class="text-left myfont " >
+			
+	</div>
+	<div class="text-reght myfont" >
+		<dl>
+		  <dd>Copyright © 2016-2022 shouku123 All Rights Reserved</dd>
+		  <dd>
+		  	<a href="https://beian.miit.gov.cn"  target="_blank">粤ICP备17037511号-2</a>
+		  	&nbsp;&nbsp;<span onclick="javascript:feedbackShow();" style="cursor:pointer;" >联系我们</span>
+			&nbsp;&nbsp;<span  class="dropdown-toggle" style="cursor:pointer;"
+					 onclick="javascript:qrShow('spice','https://shouku123.com/spice','pub/encoderQRCode2Username.do?username=spice');"
+			  >扫一扫</span>
+			  &nbsp;&nbsp;<a href="https://shouku123.com/doc/#/" target="_blank">帮助</a>
+          </dd>
+		</dl>
+	</div>
+</footer>
+
+<!-- 附加导航 -->
+<div class="btn-group-vertical group-index-right" style="display: none;">
+	
+		
+		<a href="#urlGroupItem_149999" class="btn btn-default" >参</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+		<a href="#urlGroupItem_149997" class="btn btn-default" >问</a>
+		
+	
+		
+	
+		
+		<a href="#urlGroupItem_149995" class="btn btn-default" >云</a>
+		
+	
+		
+	
+		
+	
+	
+		
+	
+		
+		<a href="#urlGroupItem_150000" class="btn btn-default" >前</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+		<a href="#urlGroupItem_149998" class="btn btn-default" >技</a>
+		
+	
+		
+	
+		
+	
+		
+	
+	
+		
+	
+		
+	
+		
+		<a href="#urlGroupItem_186456" class="btn btn-default" >默</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+		<a href="#urlGroupItem_150001" class="btn btn-default" >编</a>
+		
+	
+		
+	
+	
+		
+	
+		
+	
+		
+	
+		
+		<a href="#urlGroupItem_149996" class="btn btn-default" >开</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+		<a href="#urlGroupItem_150002" class="btn btn-default" >开</a>
+		
+	
+</div>
+
+<!-- 侧面功能栏 -->
+<ul class="nav nav-pills nav-stacked menu-right">
+	<li >
+	    <button type="button" class="btn btn-default" data-action="expand-all" title="展开所有分组" onclick="javascript:updateCollapseShow();">
+		<span class="glyphicon glyphicon-resize-full" ></span>
+    	</button>
+	</li>
+    <li >
+    	<button type="button" class="btn btn-default" data-action="collapse-all" title="折叠所有分组" onclick="javascript:updateCollapseHide();">
+        <span class="glyphicon glyphicon-resize-small"  ></span>
+        </button>
+    </li>
+    <li >
+    	<button type="button" class="btn btn-default" data-action="collapse-all" onclick="javascript:gotoTop();">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+        </button>
+    </li>
+</ul>
+
+<!-- 更新分组模态框（Modal） -->
+<div class="modal fade" id="updateUrlGroupsModal" role="dialog" 
+	aria-labelledby="updateUrlGroupsLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content myfont">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="javascript:closeUpdateUrlGroupsModal();">&times;</button>
+                <h4 class="modal-title " id="updateUrlGroupsLabel" >修改分组信息</h4>
+            </div>
+            <form name="updateUrlGroupsModalForm" id="updateUrlGroupsModalForm" onkeydown="if(event.keyCode==13){subUpdateUrlGroupModal();};">
+            <div class="modal-body">
+				  <input type="hidden" name="id" id="updateUrlGroupsModalForm_id" value="0">
+				  <div class="form-group">
+				    <label for="updateUrlGroupsModalForm_title">标题:</label>
+				    <input type="text" 
+				           class="form-control" 
+				           maxlength="10" 
+				           placeholder="请输入标题,最长10位" 
+				           value="" 
+				           name="title"
+				           id="updateUrlGroupsModalForm_title"
+				           >
+				  </div>
+				  
+				  <div class="form-group">
+				    <div><label>颜色:</label></div>
+				    <div class="btn-group colorBtnGroup" role="group">
+				      <input type="hidden" name="color" id="updateUrlGroupsModalForm_color" value="default">
+					  <button type="button" class="btn btn-default" value="default">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-primary" value="primary">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-success" value="success">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-info" value="info">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-warning" value="warning">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-danger" value="danger">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+				  	</div>
+				  </div>
+			  	  <div class="form-group ">
+				    <label for="updateUrlGroupsModalForm_appId">所在版块:</label>
+			    	<select class="form-control" name="appId" id="updateUrlGroupsModalForm_appId">
+			    		<option value="0">默认</option>
+			    		
+						  <option value="4599" selected>码农</option>
+						
+						  <option value="4601" >二次元</option>
+						
+						  <option value="4600" >三次元</option>
+						
+					</select>
+			  	  </div>
+				  <div class="form-group ">
+				    <label for="updateUrlGroupsModalForm_isPublic1">是否公开:</label>
+					<div>
+					    <label class="radio-inline">
+						  <input type="radio" name="isPublic" id="updateUrlGroupsModalForm_isPublic1" value="1" checked="checked"> 公开
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="isPublic" id="updateUrlGroupsModalForm_isPublic0" value="0" > 私密
+						</label>
+					</div>
+			  	  </div>
+			  	  
+			  	  <div class="alert alert-danger" style="display: none;"
+							role="alert" id="updateUrlGroupsModalForm_alert"></div>
+            </div>
+            <div class="modal-footer">
+            	<a href="javascript:delUrlGroup();" style="padding-right: 20px;">删除分组</a>
+                <button type="button" class="btn btn-default" onclick="javascript:closeUpdateUrlGroupsModal();">关闭</button>
+                <button type="button" class="btn btn-primary" onclick="javascript:subUpdateUrlGroupModal();">提交</button>
+            </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 更新URL信息模态框（Modal） -->
+<div class="modal fade" id="updateUrlModal" role="dialog" 
+	aria-labelledby="updateUrlLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content myfont">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="javascript:closeUpdateUrlModal();">&times;</button>
+                <h4 class="modal-title "  >修改网址信息</h4>
+            </div>
+            <form name="updateUrlModalForm" id="updateUrlModalForm" onkeydown="if(event.keyCode==13){subUpdateUrlForm();};">
+            <div class="modal-body">
+				  <input type="hidden" name="id" id="updateUrlModalForm_id" value="0">
+				  <div class="form-group">
+				    <label for="updateUrlModalForm_URL">网址:</label>
+				    <input type="text" 
+				           class="form-control" 
+				           maxlength="255" 
+				           placeholder="请输入网址(URL),最长255位" 
+				           value="" 
+				           name="url"
+				           id="updateUrlModalForm_URL"
+				           >
+				  </div>
+				  <div class="form-group">
+				    <label for="updateUrlModalForm_title">标题:</label>
+				    <div class="input-group">
+				    <input type="text" 
+				           class="form-control" 
+				           maxlength="75" 
+				           placeholder="请输入标题,最长75位" 
+				           value="" 
+				           name="title"
+				           id="updateUrlModalForm_title"
+				           >
+				           <span class="input-group-btn">
+					        <button class="btn btn-default" type="button" onclick="loadUrlTile();" id="updateUrlModalForm_title_button">获取标题</button>
+					      </span>
+					  </div><!-- /input-group -->
+				  </div>
+				  <div class="form-group">
+				    <div><label>颜色:</label></div>
+				    <div class="btn-group colorBtnGroup" role="group" id="updateUrlModal_colorBtnGroup">
+				      <input type="hidden" name="color" id="updateUrlModalForm_color" value="default">
+					  <button type="button" class="btn btn-default" value="default">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-primary" value="primary">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-success" value="success">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-info" value="info">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-warning" value="warning">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+					  <button type="button" class="btn btn-danger" value="danger">
+					  	<span class="glyphicon glyphicon-unchecked"></span>
+					  </button>
+				  	</div>
+				  </div>
+				  <div class="form-group ">
+				    <label for="updateUrlModalForm_appId">所在版块:</label>
+			    	<select class="form-control" name="appId" id="updateUrlModalForm_appId">
+			    		<option value="0">默认</option>
+			    		
+						  <option value="4599" selected>码农</option>
+						
+						  <option value="4601" >二次元</option>
+						
+						  <option value="4600" >三次元</option>
+						
+					</select>
+			  	  </div>
+				  <div class="form-group ">
+				    <label for="updateUrlModalForm_groupid">所在分组:</label>
+			    	<select class="form-control" name="groupid" id="updateUrlModalForm_groupid">
+			    		
+			    			<option value="149999">参考手册</option>
+			    		
+			    			<option value="150000">前端</option>
+			    		
+			    			<option value="186456">默认分组</option>
+			    		
+			    			<option value="149996">开源社区</option>
+			    		
+			    			<option value="149997">问答社区</option>
+			    		
+			    			<option value="149998">技术社区</option>
+			    		
+			    			<option value="149995">云服务</option>
+			    		
+			    			<option value="150001">编程语言</option>
+			    		
+			    			<option value="150002">开放平台</option>
+			    		
+					</select>
+			  	  </div>
+				  <div class="form-group ">
+				    <label for="updateUrlModalForm_isPublic">公开/私密:</label>
+			    	<select class="form-control" name="isPublic" id="updateUrlModalForm_isPublic">
+						  <option value="1">公开</option>
+						  <option value="0">私密</option>
+					</select>
+			  	  </div>
+			  	  <div class="alert alert-danger" style="display: none;"
+							role="alert" id="updateUrlModalForm_alert"></div>
+            </div>
+            <div class="modal-footer">
+            	<a href="javascript:delUrl();" style="padding-right: 20px;">删除网址</a>
+                <button type="button" class="btn btn-default" onclick="javascript:closeUpdateUrlModal();">关闭</button>
+                <button type="button" class="btn btn-primary" onclick="javascript:subUpdateUrlForm();">提交</button>
+            </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 收藏APP模态框（Modal） -->
+<div class="modal fade" id="collectModalShow" role="dialog" 
+	aria-labelledby="updateUrlLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content myfont">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="javascript:collectModalHide();">&times;</button>
+                <h4 class="modal-title " id="updateUrlLabel" ><strong>收藏到我的主页</strong></h4>
+            </div>
+            <form name="collectModalForm" id="collectModalForm" onkeydown="if(event.keyCode==13){subUpdateUrlForm();};">
+            <div class="modal-body">
+				  <div class="form-group ">
+				    <label for="collectModalForm_appId">所在版块:</label>
+			    	<select class="form-control" name="appId" id="collectModalForm_appId">
+			    		<option value="-1">+ 创建同名版块</option>
+			    		<option value="0">默认</option>
+			    		
+						  <option value="4599">码农</option>
+						
+						  <option value="4601">二次元</option>
+						
+						  <option value="4600">三次元</option>
+						
+					</select>
+			  	  </div>
+			  	  <div class="alert alert-danger" style="display: none;"
+							role="alert" id="collectModalForm_alert"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="javascript:collectModalHide();">关闭</button>
+                <button type="button" class="btn btn-info" onclick="javascript:subCollectAppForm(this);">确定</button>
+            </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 成功Modal -->
+<div class="modal fade" id="successModal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="qrShowModalLogo"><img src="/res/img/shouku123_logo.png"></h4>
+      </div>
+      <div class="modal-body center-block">
+      	<div class="alert alert-success" role="alert">恭喜，收藏成功！已将此版块，收藏到您的主页。</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">我知道了</button>
+        <button type="button" class="btn btn-success" onclick="gotoIndex()">去主页看看</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 官方通用JS -->
+
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://shouku123.com/res/js/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://shouku123.com/res/js/bootstrap.min.js"></script>
+<!-- 一键复制 -->
+<script src="https://shouku123.com/res/js/clipboard.min.js"></script>
+
+<script type="text/javascript">
+    
+/**显示二维码**/
+function qrShow(title,url,imgSrc) {
+	$('#qrShowModal_title').html(title);
+	$('#qrShowModal_url').html(url);
+	$('#qrShowModal_img').attr('src','https://shouku123.com/'+imgSrc); 
+	$('#qrShowModal_copyurl').attr('data-clipboard-text',url); 
+	$('#qrShowModal_copyurl').html('一键复制网址'); 
+	$('#qrShowModal').modal();
+}
+	
+/**弹出消息框**/
+function showAlert(id,type,msg) {
+	var modal = $('#'+id);
+	modal.removeClass();
+	modal.addClass("alert");
+	modal.addClass("alert-"+type);
+	modal.html(msg);
+	modal.show();
+	
+	setTimeout(function() {
+		modal.hide();
+	}, 4000)
+}
+/**弹出消息框2**/
+function showAlertTime(id,type,msg,time) {
+	var modal = $('#'+id);
+	modal.removeClass();
+	modal.addClass("alert");
+	modal.addClass("alert-"+type);
+	modal.html(msg);
+	modal.show();
+	
+	setTimeout(function() {
+		modal.hide();
+	}, time)
+}
+
+function showMsg(msg) {
+	$("#showMsg").html(msg);
+	$("#showMsg").show();
+	setTimeout(function () {     
+		$("#showMsg").hide();
+	}, 1000); 
+}
+
+/**滚动置顶**/
+function gotoTop() {
+	$(document.documentElement).animate({
+            scrollTop: 0
+    },200);
+    //支持chrome
+    $(document.body).animate({
+        scrollTop: 0
+    },200);
+}
+
+/**清空表单**/
+function cleanForm2Id(formId) {
+	$("#"+formId)[0].reset(); 
+}
+
+/**清空颜色选择框**/
+function cleanColorBtnGroup(formId) {
+	$("#"+formId+" input[name='color']").val("");
+	$("#"+formId+" .colorBtnGroup")
+		.find(".glyphicon-ok")
+		.removeClass("glyphicon-ok")
+		.addClass("glyphicon-unchecked");
+}
+
+/**选择颜色选择框**/
+function chooseColorBtnGroup(formId,value) {
+	$("#"+formId+" input[name='color']").val(value);
+	var btnColor = ".btn-"+value;
+	$("#"+formId+" .colorBtnGroup "+btnColor+" span")
+		.removeClass("glyphicon-unchecked")
+		.addClass("glyphicon-ok");
+}
+
+/**替换样式**/
+function replaceClass(obj, cls1, cls2) {  
+	$(obj).removeClass(cls1);    // 从被选元素删除一个或多个类
+	$(obj).addClass(cls2);       // 向被选元素添加一个或多个类
+}  
+/**自动获取网页标题**/
+function navbarUrlOnBlur() {
+	var url = $.trim($("#addUrlForm_url").val());
+	var title = $.trim($("#addUrlForm_title").val());
+	if(url!="" && title=="") {
+		$.get("/getUrlTitle.do",{url:url}, function(data){
+			if(data.return_code=="SUCCESS") {
+				var title_now = $.trim($("#addUrlForm_title").val());
+				if(title_now=="") {
+					$('#addUrlForm_title').val(data.data);
+				}
+			}
+			console.log(data.return_msg);	
+    	},'json');
+	}
+
+	if($("#addUrlForm_isPublic").val() != 0) {
+        $.get("/isUrlBlack.do",{url:url}, function(data){
+            if(data.return_code=="SUCCESS") {
+                $("#addUrlForm_isPublic").val("0");
+            }
+            console.log(data.return_msg);
+        },'json');
+    }
+
+}
+
+/**联系我们事件**/
+function feedbackShow() {
+	$('#feedbackModal').modal('show');
+}
+
+/**提交解锁版块事件**/
+function subUnLockForm() {
+	
+	var unLockPwd = $("#unLockPwd");
+    if (unLockPwd.val() == '') {
+        unLockPwd.focus();
+        showAlert('alterUnLockFormMsg','danger',"解锁密码不能为空!");
+        return false;
+    }
+
+	jQuery.ajax({
+		url: '/unLockApp.do',
+		data: $('#unLockForm').serialize(),
+		type: 'POST',
+		dataType:'json', 
+		success: function(data){
+			if(data.return_code=="SUCCESS") {
+				location.reload();
+			} else {
+            	showAlert('alterUnLockFormMsg','danger',data.return_msg);
+			}
+			
+		}
+	});
+	return false;
+}
+
+/**提交锁定版块事件**/
+function lockApp() {
+	jQuery.ajax({
+		url: '/lockApp.do',
+		data: {appId:'4599'},
+		type: 'POST',
+		dataType:'json', 
+		success: function(data){
+			if(data.return_code=="SUCCESS") {
+				window.location.href = window.location.href;
+			} else {
+            	showAlert('alterUnLockFormMsg','danger',data.return_msg);
+			}
+			
+		}
+	});
+	return false;
+}
+
+/****************网址模块********************/
+/** 添加链接  **/
+var isSubAddUrlForm = false;
+function subAddUrlForm() {
+	if(isSubAddUrlForm) {
+		return;
+	}
+	isSubAddUrlForm = true;
+	var url = $("#addUrlForm_url");
+    if ($.trim(url.val()) == '') {
+        url.focus();
+        showAlert('addUrlForm_alert','danger',"网址不能为空!");
+        isSubAddUrlForm = false;
+        return;
+    }
+    if (url.val().length > 255 ) {
+        url.focus();
+        showAlert('addUrlForm_alert','danger',"网址长度最多只有255位!");
+        isSubAddUrlForm = false;
+        return;
+    }
+	var title = $("#addUrlForm_title");
+    if ($.trim(title.val()) == '') {
+        title.focus();
+        showAlert('addUrlForm_alert','danger',"标题不能为空!");
+        isSubAddUrlForm = false;
+        return;
+    }
+    if (title.val().length > 75 ) {
+        title.focus();
+        showAlert('addUrlForm_alert','danger',"标题长度最多只有75位!");
+        isSubAddUrlForm = false;
+        return;
+    }
+    var login_username = "spice";
+    if(login_username == ''){
+    	var pin = $("#addUrlForm_pin");
+        isSubAddUrlForm = false;
+        if ($.trim(pin.val()) == '') {
+            pin.focus();
+            showAlert('addUrlForm_alert','danger',"口令不能为空（登录后可免口令）!");
+            return;
+        }
+        if (pin.val().length > 6 ||  pin.val().length <4) {
+            pin.focus();
+            showAlert('addUrlForm_alert','danger',"口令长度不正确（4~6位）!");
+            return;
+        }
+    }
+    jQuery.ajax({
+		url: '/spice/addUrl.do',
+		data: $('#addUrlForm').serialize(),
+		type: 'POST',
+		dataType:'json', 
+		success: function(data){
+			isSubAddUrlForm = false;
+			if(data.return_code=="SUCCESS") {
+				location='https://shouku123.com/spice/码农';
+				return;
+			}
+            showAlert('addUrlForm_alert','danger',data.return_msg);
+		}
+	});
+}
+
+/****************分组模块********************/
+
+/**提交添加分组事件**/
+function subAddUrlGroupModel() {
+
+	var title = $("#addUrlGroups_title");
+    if ($.trim(title.val()) == '') {
+        title.focus();
+        $('#addUrlGroups_alert').html("组名不能为空（1~10位）!");
+        $('#addUrlGroups_alert').show();
+        return false;
+    }
+    if (title.val().length > 10 ) {
+            title.focus();
+            $('#addUrlGroups_alert').html("组名长度不正确（1~10位）!");
+            $('#addUrlGroups_alert').show();
+            return false;
+    }
+    
+    var login_username = "spice";
+    if(login_username == ''){
+    	var pin = $("#addUrlGroups_pin");
+        if ($.trim(pin.val()) == '') {
+            pin.focus();
+            $('#addUrlGroups_alert').html("口令不能为空（登录后可免口令）!");
+            $('#addUrlGroups_alert').show();
+            return false;
+        }
+        if (pin.val().length > 6 ||  pin.val().length <4) {
+            pin.focus();
+            $('#addUrlGroups_alert').html("口令长度不正确（4~6位）!");
+            $('#addUrlGroups_alert').show();
+            return false;
+        }
+    }
+	jQuery.ajax({
+		url: '/spice/addUrlGroup.do',
+		data: $('#addUrlGroups_form').serialize(),
+		type: 'POST',
+		dataType:'json', 
+		success: function(data){
+			if(data.return_code=="SUCCESS") {
+				$("#addUrlForm_urlGroupSelect").prepend("<option value='"+data.data+"' selected>"+$("#addUrlGroups_title").val()+"</option>");
+				$("#addUrlForm_urlGroupSelect option").first().attr("selected",true);
+				
+				//清理现场
+				cleanForm2Id("addUrlGroups_form");
+				cleanColorBtnGroup("addUrlGroups_form");
+				chooseColorBtnGroup("addUrlGroups_form","default");
+				
+				$('#addUrlGroupsModal').modal('hide');	
+			} else {
+				$('#addUrlGroups_alert').html(data.return_msg);
+            	$('#addUrlGroups_alert').show();
+			}
+			
+		}
+	});
+	return false;
+}
+
+/**关闭添加分组事件**/
+function closeAddUrlGroupModel() {
+	$('#addUrlGroupsModal').modal('hide');
+	$("#addUrlForm_urlGroupSelect option").first().attr("selected",true);
+	document.getElementById("addUrlForm_urlGroupSelect").options[0].selected = true;
+}
+
+/**显示设置【版块】事件**/
+function showAppModel() {
+	emptyAppModel();
+	$("#user-app-modal").modal('show');
+}
+
+/**清空板块模态框**/
+function emptyAppModel() {
+	$("#appId").val("");
+	$("#appName").val("");
+	$("#appItem").val("4");
+	
+	$('#isUsePwd0').prop("checked", "checked");
+	
+	$("#appPwd").val("");
+	$("#appPwd").hide();
+	
+	$("#app_pin").val("");
+	$("#alterAppFormMsg").hide();
+}
+
+/**提交设置【版块】事件**/
+function subAppFormModel() {
+
+	var appName = $("#appName");
+    if ($.trim(appName.val()) == '') {
+        appName.focus();
+        showAlert('alterAppFormMsg','danger',"版块名称不能为空（1~6位）!");
+        return;
+    }
+    
+    var isUserPwd3 = $('#isUsePwd2').is(':checked');
+    if(isUserPwd3) {
+    	var appPwd = $("#appPwd");
+    	if (appPwd.val() == '') {
+        appPwd.focus();
+        showAlert('alterAppFormMsg','danger',"请设置此版块密码（1~32位）!");
+        return;
+	    }
+    }
+    
+    var login_username = "spice";
+    if(login_username == ''){
+    	var pin = $("#app_pin");
+        if ($.trim(pin.val()) == '') {
+            pin.focus();
+            $('#alterAppFormMsg').html("收藏口令不能为空（登录后可免收藏口令）!");
+            $('#alterAppFormMsg').show();
+            return;
+        }
+        if (pin.val().length > 6 ||  pin.val().length <4) {
+            pin.focus();
+            $('#alterAppFormMsg').html("收藏口令长度不正确（4~6位）!");
+            $('#alterAppFormMsg').show();
+            return;
+        }
+    }
+
+	jQuery.ajax({
+		url: '/spice/addOrUpdateApp.do',
+		data: $('#appForm').serialize(),
+		type: 'POST',
+		dataType:'json', 
+		success: function(data){
+			if(data.return_code=="SUCCESS") {
+				//去指定页面
+				window.location.href = "https://shouku123.com/spice/"+appName.val();
+			} else {
+				$('#alterAppFormMsg').html(data.return_msg);
+            	$('#alterAppFormMsg').show();
+			}
+			
+		}
+	});
+}
+
+/**监听搜索,搜索本页**/
+function pageSo(dom) {
+	var key = $.trim($(dom).val());
+	if(key!=null && key != "") {
+		$(".list-group-item").each(function () {
+			var value = $(this).find("a").text();
+			if(value.indexOf(key) != -1) {
+				$(this).addClass("so-key-mark");
+                $(this).show();
+			} else {
+				$(this).removeClass("so-key-mark");
+                $(this).hide();
+			}
+		});
+	} else {
+		$(".list-group-item").removeClass("so-key-mark");
+        $(".list-group-item").show();
+	}
+	
+}
+
+$(function () {
+
+	$(window).scroll(function(){
+        var this_scrollTop = $(this).scrollTop();
+        if(this_scrollTop>386 && $(window).width() < 768){
+            $(".group-index-right").show();
+            $(".urlGroups").css("width",($(window).width()-55)+"px");
+        } else {
+        	$(".group-index-right").hide();
+        	$(".urlGroups").css("width","100%");
+        }
+    });
+    $(window).resize(function(){
+   	    var this_scrollTop = $(this).scrollTop();
+	    if(this_scrollTop>386 && $(window).width() < 768){
+            $(".group-index-right").show();
+            $(".urlGroups").css("width",($(window).width()-55)+"px");
+        } else {
+        	$(".group-index-right").hide();
+        	$(".urlGroups").css("width","100%");
+        }
+	});
+
+ 	/**创建分组事件**/
+ 	$("#addUrlForm_urlGroupSelect").change(function(){
+	    var opt=$("#addUrlForm_urlGroupSelect").val();
+	    if(opt == -1) {
+			$('#addUrlGroupsModal').modal('show');
+	    }
+	});
+
+ 	/**颜色选择事件**/
+	$(".colorBtnGroup button").click(function() {
+
+		$(this).parent().children("input").val($(this).val());
+
+		$(this).parent().find(".glyphicon-ok")
+				.removeClass("glyphicon-ok")
+				.addClass("glyphicon-unchecked");
+
+		$(this).children("span")
+			.removeClass("glyphicon-unchecked")
+			.addClass("glyphicon-ok");
+			
+	});
+	
+	/**二维码Modal 一键复制URL**/
+	var btn = document.getElementById('qrShowModal_copyurl');
+	var clipboard = new Clipboard(btn);
+	
+	clipboard.on('success', function(e) {
+		e.trigger.innerHTML = "已复制"
+	    /* console.log(e); */
+	});
+	
+	clipboard.on('error', function(e) {
+	    console.log(e);
+	});
+	
+	/**设置版块相关**/
+	$(".is-use-pwd-radio").click(function () {
+		var val = $(this).val();
+		if(val == 2) {
+			$("#appPwd").show();
+		} else {
+			$("#appPwd").hide();
+		}
+	});
+	
+});
+
+//百度统计old: db16bce1e8572cc7b14056793a19ff66
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?89459179d6d45c4a7d450e4e4619bfc9";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+//10分钟未有操作则，自动刷新页面
+var timer;
+function startTimer() { 
+	clearTimeout(timer);
+	timer=setTimeout( function() {
+		window.location.reload();
+		//alert("未有操作!");
+	},1000 * 60 * 10);
+	return;
+}
+document.onmousemove = startTimer; 
+</script>
+<!-- JQ 瀑布流插件 JavaScript 文件 -->
+<script src="https://shouku123.com/res/js/masonry.pkgd.min.js"></script>
+<!-- JQ 拖拽插件 JavaScript 文件 -->
+<script src="https://shouku123.com/res/js/jquery-ui.min.js"></script>
+<!-- 百度搜索提示 -->
+<script charset="gbk" src="https://shouku123.com/res/js/baidu/opensug.js"></script>
+
+<script type="text/javascript">
+	var isIndexUser = "true";
+	
+	/**收藏版块**/
+	function collectApp() {
+		$("#collectModalShow").modal('show');
+	}
+	/**隐藏收藏模态框**/
+	function collectModalHide() {
+		$("#collectModalShow").modal('hide');
+	}
+	/**提交收藏**/
+	var isSubCollectApp = false;
+	function subCollectAppForm(dom) {
+		if(isSubCollectApp) {
+			return;
+		}
+		isSubCollectApp = true;
+		$(dom).text("正在处理...");
+		
+		var appId = $("#collectModalForm_appId").val();
+		
+		$.post("/pub/collectApp.do",{s_userName:'spice',s_appId:4599,to_appId:appId}, function(data){
+			if(data.return_code=="SUCCESS") {
+				$("#collectModalShow").modal('hide');
+				$("#successModal").modal('show');
+			} else {
+            	showAlertTime('collectModalForm_alert','danger',data.return_msg, 10000);
+			}
+			isSubCollectApp = false;
+			$(dom).text("确定");
+		},'json');
+	}
+	
+	/**收藏成功，跳转到主页**/
+	function gotoIndex() {
+		var app = $("#collectModalForm_appId").find("option:selected");
+		
+		var appName = app.text();
+		
+		if(app.val() == 0) {
+			appName = "";
+		} else if(app.val() == -1) {
+			appName = "码农";
+		}
+		
+		window.location.href = "/spice/"+appName;
+		return;
+	}
+		
+	/**显示设置【版块】事件**/
+	function editAppModel() {
+		$("#appId").val("4599");
+		$("#appName").val("码农");
+		$("#appItem").val("1");
+		$('#isUsePwd0').prop("checked", "checked");
+		
+		var isUsePwd = "0";
+		if(isUsePwd == 2) {
+			$("#appPwd").val("");
+			$("#appPwd").show();
+		} else {
+			$("#appPwd").hide();
+		}
+		
+		$("#app_pin").val("");
+		
+		$("#alterAppFormMsg").hide();
+		
+		$("#user-app-modal").modal('show');
+	}
+
+	/**版块模块**/
+	function deleteApp() {
+		if(confirm("确定要删除版块“码农”吗？\t\r（删除后此版块下的分组将合并到“默认”版块）")){
+		  var id = "4599";
+          $.post("/delApp.do",{id:id}, function(data){
+				if(data.return_code=="SUCCESS") {
+					location = "/spice";
+				} else {
+	            	showAlert('app_btn_alert','danger',data.return_msg);
+				}
+          },'json');
+        }
+	}
+	
+	/****************网址模块********************/
+	/**关闭更新分组事件**/
+	function closeUpdateUrlModal() {
+		//清理现场
+		cleanForm2Id("updateUrlModalForm");
+		cleanColorBtnGroup("updateUrlModalForm");
+		$("#updateUrlModal").modal('hide');
+	}
+	
+	/**更新网址信息事件**/
+	function updateUrl(id) {
+		$.get("/getUrl.do",{id:id}, function(data){
+			if(data.return_code=="SUCCESS") {
+				$('#updateUrlModalForm_id').val(data.data.id);
+				$('#updateUrlModalForm_title').val(data.data.title);
+				$('#updateUrlModalForm_URL').val(data.data.url);
+				$('#updateUrlModalForm_color').val(data.data.color);
+				chooseColorBtnGroup("updateUrlModalForm",data.data.color);
+				$("#updateUrlModalForm_isPublic").val(data.data.isPublic);
+				$("#updateUrlModalForm_groupid").val(data.data.groupid);
+				$("#updateUrlModalForm_isTop").val(data.data.isTop);
+	            $('#updateUrlModal').modal('show');
+			}
+        },'json');
+	}
+	
+	/** 更新链接  **/
+	function subUpdateUrlForm() {
+		var url = $("#updateUrlModalForm_URL");
+        if ($.trim(url.val()) == '') {
+            url.focus();
+            $('#updateUrlModalForm_alert').html("网址不能为空!");
+            $('#updateUrlModalForm_alert').show();
+            return;
+        }
+        if (url.val().length > 255 ) {
+            url.focus();
+            $('#updateUrlModalForm_alert').html("网址长度最多只有255位!");
+            $('#updateUrlModalForm_alert').show();
+            return;
+	    }
+		var title = $("#updateUrlModalForm_title");
+        if ($.trim(title.val()) == '') {
+            title.focus();
+            $('#updateUrlModalForm_alert').html("标题不能为空!");
+            $('#updateUrlModalForm_alert').show();
+            return;
+        }
+        if (title.val().length > 75 ) {
+            title.focus();
+            $('#updateUrlModalForm_alert').html("标题长度最多只有75位!");
+            $('#updateUrlModalForm_alert').show();
+            return;
+	    }
+	    
+        jQuery.ajax({
+			url: '/updateUrl.do',
+			data: $('#updateUrlModalForm').serialize(),
+			type: 'POST',
+			dataType:'json', 
+			success: function(data){
+				if(data.return_code=="SUCCESS") {
+					location.reload();
+					return;
+				}
+				$('#updateUrlModalForm_alert').html(data.return_msg);
+	            $('#updateUrlModalForm_alert').show();
+			}
+		});
+	}
+	/**删除网址事件**/
+	function delUrl() {
+		var title = $('#updateUrlModalForm_title').val();
+		if(confirm("确定要删除“"+title+"”吗？")){
+		  var id = $('#updateUrlModalForm_id').val();
+          $.post("/delUrl.do",{id:id}, function(data){
+				if(data.return_code=="SUCCESS") {
+					location.reload();
+				} else {
+					$('#updateUrlModalForm_alert').html(data.return_msg);
+	            	$('#updateUrlModalForm_alert').show();
+				}
+          },'json');
+        }
+	}
+	
+	/****************分组模块********************/
+	var isActionCollapse = false;
+	
+	/**切换隐藏显示**/
+ 	function updateCollapse(id,obj) {
+		if(isActionCollapse) {
+ 			showMsg("操作过于频繁!");
+ 			return;
+ 		}
+ 		isActionCollapse = true;
+ 		var select_id = '#urls_'+id;
+
+    	
+    	if( $(obj).hasClass('glyphicon-chevron-down') ) {
+    		 $(obj).removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-left");
+    		 $(select_id).collapse('hide');
+    	} else {
+    		 $(obj).removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-down");
+    		 $(select_id).collapse('show');
+    	}
+		
+		if(isIndexUser=="true") {
+			//更新
+			$.get("/updateUrlGroupShow.do",{id:id}, function(data){
+	            console.log(data.return_msg);
+	            showMsg(data.return_msg);
+	            
+	            setTimeout(function() {
+					isActionCollapse = false;
+				}, 300)
+	            
+	        },'json');
+		} else {
+			setTimeout(function() {
+				isActionCollapse = false;
+			}, 300)
+		}
+	}
+
+	
+	/**控制所有下拉显示**/
+ 	function updateCollapseShow() {
+ 		if(isActionCollapse) {
+ 			showMsg("操作过于频繁!");
+ 			return;
+ 		}
+ 		isActionCollapse = true;
+
+    	$(".urls.collapse").each(function(){
+		    $(this).collapse('show');
+		});
+		
+		$(".glyphicon-leftOrdown").removeClass("glyphicon-chevron-left").addClass("glyphicon-chevron-down");
+		
+		if(isIndexUser=="true") {
+			$.get("/spice/updateUrlGroupIsShow.do",{appId:4599,isShow:1}, function(data){
+					console.log(data.return_msg);
+					showMsg(data.return_msg);
+					setTimeout(function() {
+						isActionCollapse = false;
+					}, 300)
+	        },'json');
+        } else {
+        	setTimeout(function() {
+				isActionCollapse = false;
+			}, 300)
+        }
+	}
+	/**控制所有下拉隐藏**/
+ 	function updateCollapseHide() {
+		if(isActionCollapse) {
+ 			showMsg("操作过于频繁!");
+ 			return;
+ 		}
+ 		isActionCollapse = true;
+ 		
+    	$(".urls.collapse.in").each(function(){
+		    $(this).collapse('hide');
+		});
+
+		$(".glyphicon-leftOrdown").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-left");
+		
+		if(isIndexUser=="true") {
+			$.get("/spice/updateUrlGroupIsShow.do",{appId:4599,isShow:0}, function(data){
+					console.log(data.return_msg);
+					showMsg(data.return_msg);
+					setTimeout(function() {
+						isActionCollapse = false;
+					}, 300)
+	        },'json');
+        } else {
+        	setTimeout(function() {
+				isActionCollapse = false;
+			}, 300)
+        }
+	}
+	
+	/**更新分组事件**/
+	function updateUrlGroup(groupid) {
+		$.get("/getUrlGroup.do",{id:groupid}, function(data){
+			if(data.return_code=="SUCCESS") {
+				$('#updateUrlGroupsModalForm_id').val(data.data.id);
+				$('#updateUrlGroupsModalForm_title').val(data.data.title);
+				$('#updateUrlGroupsModalForm_color').val(data.data.color);
+				$('#updateUrlGroupsModalForm_appId').val(data.data.appId);
+					chooseColorBtnGroup("updateUrlGroupsModalForm",data.data.color);
+						
+				var isPublic = data.data.isPublic;	
+				if(isPublic == 1) {
+					$('#updateUrlGroupsModalForm_isPublic1').prop("checked", "checked");
+				}else {
+					$('#updateUrlGroupsModalForm_isPublic0').prop("checked", "checked");
+				}			
+										
+	            $('#updateUrlGroupsModal').modal('show');
+			}
+        },'json');
+	}
+	
+	/**删除分组事件**/
+	function delUrlGroup() {
+		var title = $('#updateUrlGroupsModalForm_title').val();
+		if(confirm("确定要删除“"+title+"”分组吗？\n删除后，该分组下的网址，同时会被删除!")){
+		  var id = $('#updateUrlGroupsModalForm_id').val();
+          $.post("/delUrlGroup.do",{id:id}, function(data){
+				if(data.return_code=="SUCCESS") {
+					location.reload();
+				} else {
+					$('#updateUrlGroupsModalForm_alert').html(data.return_msg);
+	            	$('#updateUrlGroupsModalForm_alert').show();
+				}
+          },'json');
+        }
+	}
+	
+	
+	/**提交更新分组事件**/
+	function subUpdateUrlGroupModal() {
+	
+		var title = $("#updateUrlGroupsModalForm_title");
+        if ($.trim(title.val()) == '') {
+            title.focus();
+            $('#updateUrlGroupsModalForm_alert').html("组名不能为空（1~10位）!");
+            $('#updateUrlGroupsModalForm_alert').show();
+            return;
+        }
+        if (title.val().length > 10 ) {
+	            title.focus();
+	            $('#updateUrlGroupsModalForm_alert').html("组名长度不正确（1~10位）!");
+	            $('#updateUrlGroupsModalForm_alert').show();
+	            return;
+	    }
+	    
+		jQuery.ajax({
+			url: '/updateUrlGroup.do',
+			data: $('#updateUrlGroupsModalForm').serialize(),
+			type: 'POST',
+			dataType:'json', 
+			success: function(data){
+				if(data.return_code=="SUCCESS") {
+					location.reload();
+				} else {
+					$('#updateUrlGroupsModalForm_alert').html(data.return_msg);
+	            	$('#updateUrlGroupsModalForm_alert').show();
+				}
+			}
+		});
+		
+	}
+	
+	/**关闭更新分组事件**/
+	function closeUpdateUrlGroupsModal() {
+		$('#updateUrlGroupsModal').modal('hide');
+		//清理现场
+		cleanForm2Id("updateUrlGroupsModalForm");
+		cleanColorBtnGroup("updateUrlGroupsModalForm");
+	}
+	
+	/**自动获取网页标题**/
+	var isloadUrlTile = false;
+	function loadUrlTile() {
+		if(isloadUrlTile) {
+			return;
+		}
+		isloadUrlTile = true;
+		var url = $.trim($("#updateUrlModalForm_URL").val());
+		if(url!="") {
+			$("#updateUrlModalForm_title_button").html("正在获取网页标题...");
+			$.get("/getUrlTitle.do",{url:url}, function(data){
+				if(data.return_code=="SUCCESS") {
+					$('#updateUrlModalForm_title').val(data.data);
+					$("#updateUrlModalForm_title_button").html("获取成功");
+				} else{
+					$("#updateUrlModalForm_title_button").html("获取失败(请检查网址完整性或联系我们)");
+				}
+				setTimeout(function(){
+					$("#updateUrlModalForm_title_button").html("自动获取");
+					isloadUrlTile = false;
+				},3000);
+				console.log(data.return_msg);	
+	    	},'json');
+		} else {
+			$("#updateUrlModalForm_title_button").html("请先输入网址(URL)!");
+			setTimeout(function(){
+					$("#updateUrlModalForm_title_button").html("自动获取");
+					isloadUrlTile = false;
+			},2000);
+		}
+	}
+	
+	//显示搜索提示
+	var showSoRemark_t = null;
+	function showSoRemark() {
+		
+		if(showSoRemark_t!=null) {
+			clearTimeout(showSoRemark_t);
+		}
+	
+		$(".so-remark-content").show(300);
+		
+	 	showSoRemark_t = setTimeout(function() {
+			$(".so-remark-content").hide();
+			showSoRemark_t = null;
+		}, 2800);
+	}
+
+	/******************************************/
+
+	$(function () {
+		//初始化隐藏搜索提示，切换才显示
+		showSoRemark();
+	 	
+		/**搜索其他选项卡事件**/
+	    $('#other_so_menu a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+	      var activeTab = $(e.target).text(); 
+	      $("#other_so span").html(activeTab);
+	 	});
+	 	
+	 	$('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+	 		$('#hide_so_id').val($(e.target).data("soid"));
+	 		showSoRemark();
+		})
+	 	
+		var isPC='true';
+		if(isIndexUser=="true" && isPC == 'true') {
+		
+			$(".urlGroups .panel-heading .pull-left").mousedown( function () { 
+				var appli = '<li class="sortable_end_li urlGroupItem" ></li>';
+						$("#urlGroups1").append(appli);
+						$("#urlGroups2").append(appli);
+						$("#urlGroups3").append(appli);
+						$("#urlGroups4").append(appli);
+						$( "#urlGroups1, #urlGroups2, #urlGroups3, #urlGroups4" ).sortable( "refresh" );
+			 });
+			 $(".urlGroups .panel-heading .pull-left").mouseup( function () { 
+		 		$(".sortable_end_li").remove();
+			 });
+			
+		 	/**链接拖拽排序**/
+		 	$( ".urls" ).sortable({ 
+		 		revert: 50,
+		 		cancel: "a,.noMove",
+		 		cursor: "move",
+		 		opacity: 0.8,
+		 		tolerance: "pointer",
+                connectWith: ".urls",
+		 		update : function(event, ui){
+                     var groupId = ui.item.parent().data("id");
+					 var li_list = ui.item.parent().children();
+					 var itemStr="";
+					 li_list.each(function(index){
+					  	itemStr += $(this).data("id")+"-";
+					 }); 
+					 $.post("/spice/updateURLSort.do",{itemStr:itemStr,groupId:groupId}, function(data){
+								console.log(data.return_msg);
+								showMsg(data.return_msg);
+				     },'json');
+		 			
+			    }
+		 	});
+			
+			/**分组拖拽排序**/
+			$( "#urlGroups1, #urlGroups2, #urlGroups3, #urlGroups4" ).sortable({
+				revert: 50,
+			    opacity: 0.9,
+			    cancel: "a,span,.noMove",
+			    cursor: "move",
+		        tolerance: "pointer",
+		        connectWith: ".urlGroups",
+		        stop : function(event, ui){
+		        	$(".sortable_end_li").remove();
+		        	var li_list = ui.item.parent().children();
+		        	var dataCol = ui.item.parent().attr("data-col");
+					var itemStr="";
+					li_list.each(function(index){
+						itemStr += $(this).attr("data-id")+"-";
+					}); 
+					$.post("/spice/updateGroupsSort.do",{dataCol:dataCol,itemStr:itemStr}, function(data){
+						console.log(data.return_msg);
+						showMsg(data.return_msg);
+					},'json');
+		        }
+		    });
+		 
+	 	}
+	 	
+	 	/**监听网址修改的版块**/
+	 	$("#updateUrlModalForm_appId").change(function() {
+	 		var appId = $(this).val();
+	 		$.post("/loadAppGroupList.do",{appId:appId}, function(data){
+	 			if(data.return_code=="SUCCESS") {
+					console.log(data.data);
+					$("#updateUrlModalForm_groupid option").remove();
+					var groups = data.data;
+					if(groups.length == 0) {
+						$("#updateUrlModalForm_groupid").append("<option value='-1'>此版块没有任何分组</option>");
+					} else {
+						for(var i=0; i<groups.length; i++) {
+							$("#updateUrlModalForm_groupid").append("<option value='"+groups[i].id+"'>"+groups[i].title+"</option>");
+						}
+					}
+				} else {
+	            	showAlert('updateUrlModalForm_alert','danger',data.return_msg);
+				}
+			},'json');
+	 	});
+
+	 	//停止点击链接事件浮升
+        $('.myGotoUrl').bind('click',function(event){
+            event.stopPropagation();
+        });
+    });
+
+</script>
+</body>
+</html>
